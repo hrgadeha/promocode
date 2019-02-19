@@ -8,6 +8,7 @@ from frappe.model.document import Document
 
 class Promocode(Document):
 	pass
+
 def apply_promo(doc, method):
 	Promocode_list =frappe.db.sql("select promocode_name from tabPromocode",as_list=1)
 	pl= [x[0] for x in Promocode_list]
